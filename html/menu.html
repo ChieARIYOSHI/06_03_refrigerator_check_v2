@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/menu.css">
+  <link rel="stylesheet" href="../css/hamburger.css">
+  <link rel="icon" href="../img/icon.ico">
+  <title>冷蔵庫CHECKER</title>
+</head>
+
+<body>
+  <header>
+    <!-- ハンバーガーメニューの表記内容です -->
+    <nav class="navi_menu">
+      <ul class="menu_items">
+        <li class="menu_content"><a href="index.html">トップページ</a></li>
+        <li class="menu_content"><a href="https://localhost/06_03_refrigerator_check_v2/php/food.php">冷蔵庫を見る</a></li>
+        <li class="menu_content"><a href="search.html">こんだて検索</a></li>
+        <li class="menu_content"><a href="history.html">こんだて日記</a></li>
+        <!-- <li class="menu_content"><a href="add.new.html">レシピ登録</a></li> -->
+      </ul>
+      </nav>
+      <!-- アイコン --> 
+      <div class="navi_icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+  </header>
+
+  <main class="menu_main">
+    <div class="title">
+      <img class="icon" src="../img/icon.png" alt="冷蔵庫のアイコン">
+      <h1>メニューを探す</h1>
+    </div>
+
+    <span class="icons"></span> <!-- ここに選択した#食材を表記したい -->
+
+    <!-- 本当はfood.htmlでクリックした食材が含まれるレシピだけを表記したかったのですが、知識不足も相まってその機能が追加できませんでした。 -->
+    <div class="menu_list">
+      <div class="menu">
+        <img src="../img/recipe_001.jpg" alt="スタミナ豚バラ丼のイメージ写真">
+        <button type="button" id="menu_001" class="menu_btn" onclick="display001()">スタミナ豚バラ丼</button>
+      </div>
+      <div class="menu">
+        <img src="../img/recipe_002.jpg" alt="親子丼のイメージ写真">
+        <button type="button" id="menu_002" class="menu_btn" onclick="display002()">親子丼</button>
+      </div>
+      <div class="menu">
+        <img src="../img/recipe_003.jpg" alt="豚ロース丼のイメージ写真">
+        <button type="button" id="menu_003" class="menu_btn" onclick="display003()">豚ロース丼</button>
+      </div>
+      <div class="menu">
+        <img src="../img/recipe_004.jpg" alt="チャーハンのイメージ写真">
+        <button type="button" id="menu_004" class="menu_btn" onclick="display004()">チャーハン</button>
+      </div>
+      <div class="menu">
+        <img src="../img/recipe_005.jpg" alt="あっさり豆腐丼のイメージ写真">
+        <button type="button" id="menu_005" class="menu_btn" onclick="display005()">あっさり豆腐丼</button>
+      </div>
+      <div class="menu">
+        <img src="../img/recipe_006.jpg" alt="炊き込みごはんのイメージ写真">
+        <button type="button" id="menu_006" class="menu_btn" onclick="display006()">炊き込みごはん</button>
+      </div>
+    </div>
+
+    <div id="recipe_001" class="recipe">
+      <p>スタミナ豚バラ丼</p>
+      <img src="../img/recipe_001.jpg" alt="スタミナ豚バラ丼のイメージ写真">
+      <table>
+        <tr><th>品目</th><th>量</th></tr>
+        <tr><td>豚バラ</td><td>150g</td></tr>
+        <tr><td>卵</td><td>1個</td></tr>
+        <tr><td>長ねぎ</td><td>1/8本</td></tr>
+        <tr><td>玉ねぎ</td><td>1/2個</td></tr>
+        <tr><td>にら</td><td>1/8束</td></tr>
+        <tr><td>いんげん</td><td>1本</td></tr>
+        <tr><td>ごはん</td><td>1/2合</td></tr>
+        <tr><td>ごま</td><td>少々</td></tr>
+        <tr><td>にんにく</td><td>少々</td></tr>
+        <tr><td>砂糖</td><td>小さじ1</td></tr>
+        <tr><td>胡麻味噌めんつゆ</td><td>大さじ4</td></tr>
+      </table>
+      <a class="confirm_btn" href="http://localhost/06_03_refrigerator_check_v2/php/shopping.php">このメニューで決定</a>
+      <button class="back_btn" onclick="undisplay001()">このメニューを閉じる</button>
+    </div>
+
+    <div id="recipe_002" class="recipe">
+      <p>親子丼</p>
+      <img src="../img/recipe_002.jpg" alt="親子丼のイメージ写真">
+      <table>
+        <tr><th>品目</th><th>量</th></tr>
+        <tr><td>豚バラ</td><td>150g</td></tr>
+        <tr><td>卵</td><td>1個</td></tr>
+        <tr><td>長ねぎ</td><td>1/8本</td></tr>
+        <tr><td>玉ねぎ</td><td>1/2個</td></tr>
+        <tr><td>にら</td><td>1/8束</td></tr>
+        <tr><td>いんげん</td><td>1本</td></tr>
+        <tr><td>ごはん</td><td>1/2合</td></tr>
+        <tr><td>ごま</td><td>少々</td></tr>
+        <tr><td>にんにく</td><td>少々</td></tr>
+        <tr><td>砂糖</td><td>小さじ1</td></tr>
+        <tr><td>胡麻味噌めんつゆ</td><td>大さじ4</td></tr>
+      </table>
+      <a class="confirm_btn" href="http://localhost/06_03_refrigerator_check_v2/php/shopping.php">このメニューで決定</a>
+      <button class="back_btn" onclick="undisplay002()">このメニューを閉じる</button>
+    </div>
+
+    <div id="recipe_003" class="recipe">
+      <p>豚ロース丼</p>
+      <img src="../img/recipe_003.jpg" alt="豚ロース丼のイメージ写真">
+      <table>
+        <tr><th>品目</th><th>量</th></tr>
+        <tr><td>豚バラ</td><td>150g</td></tr>
+        <tr><td>卵</td><td>1個</td></tr>
+        <tr><td>長ねぎ</td><td>1/8本</td></tr>
+        <tr><td>玉ねぎ</td><td>1/2個</td></tr>
+        <tr><td>にら</td><td>1/8束</td></tr>
+        <tr><td>いんげん</td><td>1本</td></tr>
+        <tr><td>ごはん</td><td>1/2合</td></tr>
+        <tr><td>ごま</td><td>少々</td></tr>
+        <tr><td>にんにく</td><td>少々</td></tr>
+        <tr><td>砂糖</td><td>小さじ1</td></tr>
+        <tr><td>胡麻味噌めんつゆ</td><td>大さじ4</td></tr>
+      </table>
+      <a class="confirm_btn" href="http://localhost/06_03_refrigerator_check_v2/php/shopping.php">このメニューで決定</a>
+      <button class="back_btn" onclick="undisplay003()">このメニューを閉じる</button>
+    </div>
+
+    <div id="recipe_004" class="recipe">
+      <p>チャーハン</p>
+      <img src="../img/recipe_004.jpg" alt="チャーハンのイメージ写真">
+      <table>
+        <tr><th>品目</th><th>量</th></tr>
+        <tr><td>豚バラ</td><td>150g</td></tr>
+        <tr><td>卵</td><td>1個</td></tr>
+        <tr><td>長ねぎ</td><td>1/8本</td></tr>
+        <tr><td>玉ねぎ</td><td>1/2個</td></tr>
+        <tr><td>にら</td><td>1/8束</td></tr>
+        <tr><td>いんげん</td><td>1本</td></tr>
+        <tr><td>ごはん</td><td>1/2合</td></tr>
+        <tr><td>ごま</td><td>少々</td></tr>
+        <tr><td>にんにく</td><td>少々</td></tr>
+        <tr><td>砂糖</td><td>小さじ1</td></tr>
+        <tr><td>胡麻味噌めんつゆ</td><td>大さじ4</td></tr>
+      </table>
+      <a class="confirm_btn" href="http://localhost/06_03_refrigerator_check_v2/php/shopping.php">このメニューで決定</a>
+      <button class="back_btn" onclick="undisplay004()">このメニューを閉じる</button>
+    </div>
+
+    <div id="recipe_005" class="recipe">
+      <p>あっさり豆腐丼</p>
+      <img src="../img/recipe_005.jpg" alt="あっさり豆腐丼のイメージ写真">
+      <table>
+        <tr><th>品目</th><th>量</th></tr>
+        <tr><td>豚バラ</td><td>150g</td></tr>
+        <tr><td>卵</td><td>1個</td></tr>
+        <tr><td>長ねぎ</td><td>1/8本</td></tr>
+        <tr><td>玉ねぎ</td><td>1/2個</td></tr>
+        <tr><td>にら</td><td>1/8束</td></tr>
+        <tr><td>いんげん</td><td>1本</td></tr>
+        <tr><td>ごはん</td><td>1/2合</td></tr>
+        <tr><td>ごま</td><td>少々</td></tr>
+        <tr><td>にんにく</td><td>少々</td></tr>
+        <tr><td>砂糖</td><td>小さじ1</td></tr>
+        <tr><td>胡麻味噌めんつゆ</td><td>大さじ4</td></tr>
+      </table>
+      <a class="confirm_btn" href="http://localhost/06_03_refrigerator_check_v2/php/shopping.php">このメニューで決定</a>
+      <button class="back_btn" onclick="undisplay005()">このメニューを閉じる</button>
+    </div>
+
+    <div id="recipe_006" class="recipe">
+      <p>炊き込みごはん</p>
+      <img src="../img/recipe_006.jpg" alt="炊き込みごはんのイメージ写真">
+      <table>
+        <tr><th>品目</th><th>量</th></tr>
+        <tr><td>豚バラ</td><td>150g</td></tr>
+        <tr><td>卵</td><td>1個</td></tr>
+        <tr><td>長ねぎ</td><td>1/8本</td></tr>
+        <tr><td>玉ねぎ</td><td>1/2個</td></tr>
+        <tr><td>にら</td><td>1/8束</td></tr>
+        <tr><td>いんげん</td><td>1本</td></tr>
+        <tr><td>ごはん</td><td>1/2合</td></tr>
+        <tr><td>ごま</td><td>少々</td></tr>
+        <tr><td>にんにく</td><td>少々</td></tr>
+        <tr><td>砂糖</td><td>小さじ1</td></tr>
+        <tr><td>胡麻味噌めんつゆ</td><td>大さじ4</td></tr>
+      </table>
+      <a class="confirm_btn" href="http://localhost/06_03_refrigerator_check_v2/php/shopping.php">このメニューで決定</a>
+      <button class="back_btn" onclick="undisplay006()">このメニューを閉じる</button>
+    </div>
+  </main>
+
+  <!-- ここからjavascriptです -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase.js"></script>
+
+  <script>
+    var firebaseConfig = {
+      apiKey: "",
+      authDomain: "refrigeratorcheckapp-20201126.firebaseapp.com",
+      databaseURL: "https://refrigeratorcheckapp-20201126.firebaseio.com",
+      projectId: "refrigeratorcheckapp-20201126",
+      storageBucket: "refrigeratorcheckapp-20201126.appspot.com",
+      messagingSenderId: "975540210223",
+      appId: "1:975540210223:web:6dc842b92545cf2011d4da"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore().collection('food_database');
+  </script>
+
+  <script>
+    function display001() {
+      let page001 = document.getElementById("recipe_001");
+      page001.style.display = 'flex';
+    };
+    function undisplay001() {
+      let page001 = document.getElementById("recipe_001");
+      page001.style.display = 'none';
+    }
+    function display002() {
+      let page002 = document.getElementById("recipe_002");
+      page002.style.display = 'flex';
+    };
+    function undisplay002() {
+      let page002 = document.getElementById("recipe_002");
+      page002.style.display = 'none';
+    }
+    function display003() {
+      let page003 = document.getElementById("recipe_003");
+      page003.style.display = 'flex';
+    };
+    function undisplay003() {
+      let page003 = document.getElementById("recipe_003");
+      page003.style.display = 'none';
+    }
+    function display004() {
+      let page004 = document.getElementById("recipe_004");
+      page004.style.display = 'flex';
+    };
+    function undisplay004() {
+      let page004 = document.getElementById("recipe_004");
+      page004.style.display = 'none';
+    }
+    function display005() {
+      let page005 = document.getElementById("recipe_005");
+      page005.style.display = 'flex';
+    };
+    function undisplay005() {
+      let page005 = document.getElementById("recipe_005");
+      page005.style.display = 'none';
+    }
+    function display006() {
+      let page006 = document.getElementById("recipe_006");
+      page006.style.display = 'flex';
+    };
+    function undisplay006() {
+      let page006 = document.getElementById("recipe_006");
+      page006.style.display = 'none';
+    }
+  </script>
+
+  <!-- <script>
+    $(function() {
+      $('#menu_001').on('click', function() {
+        $('#recipe_001').css('display', 'flex');
+      });
+    });
+  </script> -->
+
+  <!-- <script>
+    $('#menu_001').on('click', function() {
+      $('#recipe_001').show();
+      $('#recipe_001').css('display', 'flex');
+    });
+  </script> -->
+
+  <!-- <script>
+    function SelectPage (page) {
+      const page001 = document.getElementById(recipe_001);
+      const page002 = document.getElementById(recipe_002);
+      const page003 = document.getElementById(recipe_003);
+      const page004 = document.getElementById(recipe_004);
+      const page005 = document.getElementById(recipe_005);
+      const page006 = document.getElementById(recipe_006);
+  
+      switch (page) {
+        case 1:
+          page001.style.display = 'flex';
+          page002.style.display = 'none';
+          page003.style.display = 'none';
+          page004.style.display = 'none';
+          page005.style.display = 'none';
+          page006.style.display = 'none';
+        break;
+        
+        case 2:
+          page001.style.display = 'none';
+          page002.style.display = 'flex';
+          page003.style.display = 'none';
+          page004.style.display = 'none';
+          page005.style.display = 'none';
+          page006.style.display = 'none';
+        break;
+
+        case 3:
+          page001.style.display = 'none';
+          page002.style.display = 'none';
+          page003.style.display = 'flex';
+          page004.style.display = 'none';
+          page005.style.display = 'none';
+          page006.style.display = 'none';
+        break;
+
+        case 4:
+          page001.style.display = 'none';
+          page002.style.display = 'none';
+          page003.style.display = 'none';
+          page004.style.display = 'flex';
+          page005.style.display = 'none';
+          page006.style.display = 'none';
+        break;
+
+        case 5:
+          page001.style.display = 'none';
+          page002.style.display = 'none';
+          page003.style.display = 'none';
+          page004.style.display = 'none';
+          page005.style.display = 'flex';
+          page006.style.display = 'none';
+        break;
+
+        case 6:
+          page001.style.display = 'none';
+          page002.style.display = 'none';
+          page003.style.display = 'none';
+          page004.style.display = 'none';
+          page005.style.display = 'none';
+          page006.style.display = 'flex';
+        break;
+      }
+    };
+  </script> -->
+  
+  <!-- Firebaseの情報を記載しています -->
+  <!-- <script type="text/javascript" src="../javascript/firebase.js"></script> -->
+  <!-- ハンバーガーメニューの情報を記載しています -->
+  <script type="text/javascript" src="../javascript/hamburger.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+body {
+  background-color: #ffffffee;
+}
+
+.food_main {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.food_main h1 {
+  font-size: 20px;
+  color: #555;
+  margin-left: 10px;
+}
+
+fieldset {
+  border-style: none;
+}
+
+.done_btn {
+  width: 180px;
+  height: 30px;
+  border-radius: 30px;
+  color: white;
+  font-weight: bolder;
+  text-decoration: none;
+  background-color: #00C6A5;
+  border-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 70px;
+}
+
+#output {
+  padding: 0px;
+}
+
+.food {
+  width: 320px;
+  color: black;
+  font-size: 12px;
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  margin-top: 16px;
+}
+
+.food_image {
+  object-fit: cover;
+}
+
+.food_text {
+  width: 240px;
+  margin-left: 30px;
+}
+
+.edit_box {
+  width: 80px;
+}
